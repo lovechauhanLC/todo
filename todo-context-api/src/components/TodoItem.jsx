@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useTodo } from '../context/TodoContext';
+import { useTodo } from '../context';
 
 function TodoItem({ todo }) {
   const [isTodoEditable, setIsTodoEditable] = useState(false)
@@ -11,7 +11,7 @@ function TodoItem({ todo }) {
     setIsTodoEditable(false)
   }
   const toggleCompleted = () => {
-    console.log(todo.id);
+    //console.log(todo.id);
     toggleComplete(todo.id)
   }
 
